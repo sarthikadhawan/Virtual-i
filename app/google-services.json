@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "967352104806",
+    "firebase_url": "https://virtual-i-sahmkk.firebaseio.com",
+    "project_id": "virtual-i-sahmkk",
+    "storage_bucket": "virtual-i-sahmkk.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:967352104806:android:5e60769070c4888e",
+        "android_client_info": {
+          "package_name": "com.mc.virtuali"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "967352104806-0661s88a9pdhg0qah7ooqi3osr6auvjt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mc.virtuali",
+            "certificate_hash": "bd551abd456d4d83bbe47c627274f5c825113b0e"
+          }
+        },
+        {
+          "client_id": "967352104806-6s1c30hliam64mnalr712f2pm12p13t9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mc.virtuali",
+            "certificate_hash": "075e6f03b9b5fe3e3b7bc1756eca977bd60d840a"
+          }
+        },
+        {
+          "client_id": "967352104806-7dab4c12uid1i4hh0o8d499fomgvqacf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpgFN7ls0IU4SyV7RkEkg-4aVe740GxYA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "967352104806-7dab4c12uid1i4hh0o8d499fomgvqacf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

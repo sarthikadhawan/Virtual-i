@@ -6,7 +6,9 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.mc.virtuali.NotesActivity"
-    tools:showIn="@layout/app_bar_notes">
+    tools:showIn="@layout/app_bar_notes"
+    >
+
 
     <TextView
         android:id="@+id/message"

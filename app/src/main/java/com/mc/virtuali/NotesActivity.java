@@ -1,13 +1,13 @@
 package com.mc.virtuali;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -53,6 +53,9 @@ public class NotesActivity extends AppCompatActivity
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        Context context=getBaseContext();
+        Resources resources = context.getResources();
+        getSupportActionBar().setTitle(resources.getString(R.string.notes));
 
 //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 //        fab.setOnClickListener(new View.OnClickListener() {
@@ -75,12 +78,14 @@ public class NotesActivity extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
-//        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-//        if (drawer.isDrawerOpen(GravityCompat.START)) {
-//            drawer.closeDrawer(GravityCompat.START);
-//        } else {
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
 //            super.onBackPressed();
-//        }
+            Intent intent = new Intent(this,ocr.class);
+            this.startActivity(intent);
+        }
     }
 
     @Override
@@ -113,11 +118,11 @@ public class NotesActivity extends AppCompatActivity
 
         if (id == R.id.nav_camera) {
             // Handle the camera action
-            Intent intent1 = new Intent(this, MainActivity.class);
+            Intent intent1 = new Intent(this, ocr.class);
 //            intent1.putExtra("lang",lang_var);
             this.startActivity(intent1);
         } else if (id == R.id.nav_search) {
-            Intent intent1 = new Intent(this, SearchActivity.class);
+            Intent intent1 = new Intent(this, SearchBarActivity.class);
 //            intent1.putExtra("lang",lang_var);
             this.startActivity(intent1);
 
@@ -127,6 +132,11 @@ public class NotesActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_reminders) {
 
+        }
+        else if (id == R.id.nav_exit) {
+            ActivityCompat.finishAffinity(NotesActivity.this);
+
+            finish();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
